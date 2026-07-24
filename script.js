@@ -1,11 +1,28 @@
 function toggleMenu() {
-    
-    const menu=document.querySelector(".menu-links");
-    const icon=document.querySelector(".hamerburger-icon");
+    const menu = document.querySelector(".menu-links");
+    const icon = document.querySelector(".hamburger-icon");
+
     menu.classList.toggle("open");
     icon.classList.toggle("open");
-    
 }
+
+// Close menu when clicking outside
+document.addEventListener("click", function (event) {
+
+    const menu = document.querySelector(".menu-links");
+    const icon = document.querySelector(".hamburger-icon");
+    const hamburger = document.querySelector(".hamburger-menu");
+
+    // If menu is open and click is outside the hamburger menu
+    if (
+        menu.classList.contains("open") &&
+        !hamburger.contains(event.target)
+    ) {
+        menu.classList.remove("open");
+        icon.classList.remove("open");
+    }
+
+});
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',

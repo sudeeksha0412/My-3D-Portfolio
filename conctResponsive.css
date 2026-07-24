@@ -1,0 +1,339 @@
+/* ==========================================
+   HAMBURGER MENU
+========================================== */
+
+#hamburger-nav{
+    display:none;
+    margin-left:auto;
+}
+
+.hamburger-menu{
+    position:relative;
+    display:inline-block;
+}
+
+.hamburger-icon{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    width:30px;
+    height:24px;
+    cursor:pointer;
+    z-index:10001;
+}
+
+.hamburger-icon span{
+    width:100%;
+    height:3px;
+    background:#fff;
+    border-radius:5px;
+    transition:.3s;
+}
+
+.menu-links{
+    position:absolute;
+    top:60px;
+    right:0;
+
+    width:220px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(18,18,18,.96),
+        rgba(32,18,55,.96)
+    );
+
+    border:1px solid rgba(168,85,247,.6);
+    border-radius:18px;
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 0 20px rgba(168,85,247,.45);
+
+    overflow:hidden;
+
+    max-height:0;
+    opacity:0;
+
+    transition:.35s ease;
+
+    z-index:10000;
+}
+
+.menu-links li{
+    list-style:none;
+}
+
+.menu-links a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:55px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+}
+
+.menu-links a:hover{
+    background:rgba(168,85,247,.18);
+    color:#bb86fc;
+}
+
+.menu-links.open{
+    max-height:500px;
+    opacity:1;
+}
+
+.hamburger-icon.open span:first-child{
+    transform:rotate(45deg) translate(6px,6px);
+}
+
+.hamburger-icon.open span:nth-child(2){
+    opacity:0;
+}
+
+.hamburger-icon.open span:last-child{
+    transform:rotate(-45deg) translate(8px,-8px);
+}
+
+
+/* ==========================================
+        MOBILE
+========================================== */
+
+@media screen and (max-width:768px){
+
+/* Navigation */
+
+#desktop-nav{
+    display:none;
+}
+
+#hamburger-nav{
+    display:flex;
+    align-items:center;
+    margin-left:auto;
+}
+
+/* Header */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    width:100%;
+
+    padding:15px 18px !important;
+
+    position:relative;
+
+    z-index:1000;
+}
+
+.image-icon2{
+    position:static;
+
+    width:58px;
+
+    height:58px;
+
+    opacity:1;
+}
+
+/* Main */
+
+main{
+
+    width:100% !important;
+
+    max-width:100% !important;
+
+    padding:0 18px !important;
+
+    margin-top:15px !important;
+
+}
+
+/* Section Tag */
+
+.section-tag-box{
+    position:static !important;
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    width:70% !important;
+    margin:0 auto 30px !important;
+    right:0 !important;
+}
+
+.section-tag{
+    position:static !important;
+    width:220px !important;
+    padding:10px 25px !important;
+    text-align:center !important;
+    font-size:15px !important;
+}
+
+/* Heading */
+
+main h1{
+
+    font-size:2.2rem !important;
+
+    line-height:1.2;
+
+    margin-top:28px !important;
+}
+
+/* Intro */
+
+main>p{
+
+    width:100% !important;
+
+    max-width:100% !important;
+
+    font-size:15px !important;
+
+    line-height:1.8;
+
+    margin-top:20px;
+
+    text-align:center;
+}
+
+/* Divider */
+
+main .bg-gray-700{
+
+    margin-top:35px !important;
+}
+
+/* Contact Cards */
+
+.grid{
+
+    display:grid !important;
+
+    grid-template-columns:1fr !important;
+
+    gap:20px !important;
+
+    margin-top:35px !important;
+}
+
+.grid>div{
+
+    padding:22px 18px !important;
+
+    border-radius:18px;
+}
+
+.grid i{
+
+    font-size:2.5rem !important;
+}
+
+.grid h2{
+
+    font-size:1.5rem !important;
+
+    margin-top:18px;
+}
+
+.grid p{
+
+    font-size:15px !important;
+
+    line-height:1.7;
+
+    word-break:break-word;
+}
+
+.grid a{
+
+    font-size:15px;
+}
+
+/* Connect Heading */
+
+main>h2{
+
+    font-size:2rem !important;
+
+    margin-top:50px !important;
+}
+
+/* Social Icons */
+
+.flex.justify-center.gap-8{
+
+    gap:18px !important;
+
+    margin-top:30px !important;
+
+    flex-wrap:wrap;
+}
+
+.flex.justify-center.gap-8 a{
+
+    width:60px !important;
+
+    height:60px !important;
+
+    font-size:1.6rem !important;
+}
+
+/* Quote */
+
+.italic{
+
+    font-size:1.2rem !important;
+
+    line-height:1.7;
+
+    padding:0 10px;
+}
+
+/* Footer */
+
+footer{
+
+    padding:25px 0;
+}
+
+footer p{
+
+    font-size:14px !important;
+
+    line-height:1.8;
+
+    padding:0 10px;
+}
+
+/* Prevent Horizontal Scroll */
+
+html,
+body{
+
+    overflow-x:hidden;
+}
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+}
+
+}

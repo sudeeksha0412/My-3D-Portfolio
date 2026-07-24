@@ -56,7 +56,7 @@ header{
 
 }
 
-nav, .nav-links{
+#desktop-nav, .nav-links{
     display: flex;
     align-items: center;
     gap: 3rem;
@@ -81,11 +81,12 @@ nav a:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: calc(90vh - 6rem);
+    min-height: calc(99vh - 10rem);
     padding-right: 50%;
+    padding-bottom: 2%;
 }
-.content{
-    max-width: 40rem;
+ .content{
+    max-width: 49rem;
     margin-left: 10%;
     z-index: 999;
 
@@ -133,133 +134,30 @@ nav a:hover{
     text-shadow: 0 0 10px rgba(128,128,0,0.418);
 }
 .description{
-    font-size: 1.5em;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    letter-spacing:0.01em;
-    max-height: 550px;
-    color: gray;
-    text-align: justify;
-    
+    font-size:1.5em;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    color:gray;
+    text-align:justify;
+    line-height:1.5;
+    hyphens:auto;
+    text-justify:inter-word;
 }
 
 .Element-3d{
     position: absolute;
-    top: 25px;
+    top: 26px;
     right: -27%;
     
     
 
 }
-html{
-    scroll-behavior: smooth;
-}
-#hmburger-nav{
-    display: none;
-}
-.hamerburger-menu{
-    position: relative;
-    display:inline-block;
-}
-.hamerburger-icon{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 24px;
-    width:30px;
-    cursor: pointer;
-}
-.hamerburger-icon span{
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    transition: all .3s ease-in-out;
-}
-.menu-links{
-    position: absolute;
-    top:50%;
-    right: 0;
-    background-color: white;
-    width:fit-content;
-    max-height: 0;
-    overflow: hidden;
-    transition: all .3s ease-in-out;
-}
-.menu-links a{
-    display: block;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.5rem;
-    color:black;
-    text-decoration: none;
-    transition: all .3s ease-in-out;
-}
-.menu-links li{
-    list-style: none;
-}
-.menu-links.open{
-    max-height: 300px;
-}
-.hamerburger-icon.open span:first-child{
-    transform:rotate(45deg) translate(10px,5px)
-}
-.hamerburger-icon.open span:nth-child(2){
-    opacity: 0;
-
-}
-.hamerburger-icon.open span:last-child{
-    transform:rotate(-45deg) translate(10px,-5px)
-
-}
-.hamerburger-icon span{
-    transform:none;
-    opacity:1;
-}
 
 
-@media screen and (max-width:1300px){
-    #desktop-nav{
-        display: none;
-    }
-    #hmburger-nav{
-        display: flex;
-    }
-        
-    
-}
 
-@media(max-width:768px){
-    header{
-        padding:1rem 1.5rem;
-    }
-   
-    nav{
-        font-size: 1rem;
-        letter-spacing: 0.1rem;
-        right:10px;
-        gap:2rem;
-    }
-    
-    .content{
-        margin-top: 25rem;
-    }
-    .content{
-        max-width: 30rem;
-        margin-left: 10%;
+/* ===========================
+   Hamburger Navigation
+=========================== */
 
-    }
-    .tag-box{
-        width:12rem;
-    }
-    .content h1{
-        font-size: 2.5rem;
-
-    }
-    .description{
-        font-size: 1rem;
-    }
-
-   
-}
 /* ===========================
    Resume Page
 =========================== */
@@ -621,12 +519,12 @@ progress::-webkit-progress-value{
     max-width:950px;
     height:5px;
     background:#2d2d2d;
-    margin:90px auto;
+    margin:40px 1px;
 }
 .contact-section{
 
     text-align:center;
-    padding-top: 1%;
+    padding-top: 1px;
 
 }
 
@@ -648,9 +546,9 @@ progress::-webkit-progress-value{
 
     justify-content:center;
 
-    gap:25px;
+    gap:15px;
 
-    flex-wrap:wrap;
+    
 
     margin:35px 0;
 
@@ -692,26 +590,7 @@ progress::-webkit-progress-value{
    Responsive
 =========================== */
 
-@media(max-width:768px){
 
-    .about-section h1{
-
-        font-size:2.3rem;
-
-    }
-
-    .about-section p{
-
-        font-size:1rem;
-
-    }
-
-    section{
-
-        margin:60px 0;
-
-    }
-
-   
-
-}
+/* ===========================
+   Mobile Responsive
+=========================== */
