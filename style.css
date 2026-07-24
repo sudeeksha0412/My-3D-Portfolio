@@ -519,7 +519,7 @@ progress::-webkit-progress-value{
     max-width:950px;
     height:5px;
     background:#2d2d2d;
-    margin:40px 1px;
+    margin:80px auto;
 }
 .contact-section{
 
